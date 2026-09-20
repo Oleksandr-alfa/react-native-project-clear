@@ -2,16 +2,17 @@
 
 
 import { Text, View, StyleSheet } from 'react-native';
- import { Link } from 'expo-router'; 
+import { Link } from 'expo-router'; 
+ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Navigation() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Home screen</Text>
       <Link href="/about" style={styles.button}>
         Go to About screen
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -1,14 +1,15 @@
 import { Link } from 'expo-router';
 import { Text, View, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function AboutScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
           <Text style={styles.text}>About screen</Text>
-           <Link href="/login-screen" style={styles.button}>
+           <Link href="/" style={styles.button}>
                   Go to LoginScreen screen
                 </Link>
-    </View>
+    </SafeAreaView>
   );
 }
 
