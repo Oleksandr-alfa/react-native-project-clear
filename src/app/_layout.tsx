@@ -10,7 +10,8 @@ export default function RootLayout() {
     
     <Stack initialRouteName="index">
        <Stack.Screen name="index" options={{ headerShown: false }} />
-       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="(worker_tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="(admin_tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }

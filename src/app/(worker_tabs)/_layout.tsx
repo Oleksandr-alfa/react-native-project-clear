@@ -6,7 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 
 
 
-// const LogoImage = require('@/assets/images/logo.png');
+
 export default function TabLayout() {
   return (
     <Tabs  screenOptions={{

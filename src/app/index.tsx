@@ -98,19 +98,32 @@ import {
   View, Text, StyleSheet, Image, TextInput, TouchableOpacity,
   KeyboardAvoidingView, Platform 
 } from "react-native";
-import { useRouter } from "expo-router";
+import { useRouter } from "expo-router"
+import {users} from '../data/array_users'
 
-const LogoImage = require('@/assets/images/logo.png');
 
+
+const LogoImage = require("@/assets/images/logo_two.png");
 export default function LoginScreen() {
   const router = useRouter();
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (password.toLowerCase() === "olena") {
-      router.push("/homescreen");
+    const user = users.find(user =>
+      user.password === password.toLowerCase());
+    if (!user) return;
+    if(user.role === 'admin'){
+          router.push("/(admin_tabs)/admin_screen");
     }
-  };
+    if (user.role === 'worker') {
+      router.push("/(worker_tabs)/homescreen")
+      }
+};
+  
+  //   if (password.toLowerCase() === "olena") {
+  //     router.push("/homescreen");
+  //   }else{}
+  // };
 
   return (
     <KeyboardAvoidingView
@@ -118,7 +131,7 @@ export default function LoginScreen() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <View style={styles.container}>
-        <Image source={LogoImage} style={styles.logo} />
+        <Image source={LogoImage} style={styles.card_logo}/>
 
         <View style={styles.card}>
           <Text style={styles.title}>Welcome Back</Text>
@@ -149,11 +162,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
   },
-
-  logo: {
-    width: 160,
-    height: 60,
+  card_logo: {
+  borderColor: '#484545',
+     borderRadius: 16,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    width: 150,
+    height: 160,
     marginBottom: 40,
+},
+  logo: {
+   width: 150,
+    height: 160,
+    marginBottom: 40,
+    
   },
 
   card: {

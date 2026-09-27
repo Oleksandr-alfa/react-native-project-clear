@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 
  
-const LogoImage = require('@/assets/images/logo.png');
+
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
