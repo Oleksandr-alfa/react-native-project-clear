@@ -6,6 +6,7 @@ import Data from '@/components/Data';
 import Header from '@/components/Header';
 import ScrollPanel from '@/components/ScrollPanel';
 import Footer from '@/components/Footer';
+import PlaceObj from '@/components/PlaceObj';
 
  
 
