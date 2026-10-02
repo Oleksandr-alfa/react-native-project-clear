@@ -13,7 +13,8 @@ export default function User({ children }: Props) {
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 30,
+    fontSize: 30,
+      color: '#0d0c0c',
         // textAlign: 'center',
         // justifyContent: 'center',
     }

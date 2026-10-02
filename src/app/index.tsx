@@ -112,12 +112,21 @@ export default function LoginScreen() {
     const user = users.find(user =>
       user.password === password.toLowerCase());
     if (!user) return;
-    if(user.role === 'admin'){
-          router.push("/(admin_tabs)/admin_screen");
-    }
-    if (user.role === 'worker') {
-      router.push("/(worker_tabs)/homescreen")
-      }
+   if (user.role === 'admin') {
+  router.push({
+    pathname: "/(admin_tabs)/admin_screen",
+    params: { name: user.name.firstName }
+  });
+}
+
+if (user.role === 'worker') {
+  router.push({
+    pathname: "/(worker_tabs)/homescreen",
+    params: { name: user.name.firstName }
+  });
+}
+
+    
 };
   
   //   if (password.toLowerCase() === "olena") {

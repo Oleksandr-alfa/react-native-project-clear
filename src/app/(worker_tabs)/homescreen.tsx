@@ -6,17 +6,21 @@ import Data from '@/components/Data';
 import Header from '@/components/Header';
 import ScrollPanel from '@/components/ScrollPanel';
 import Footer from '@/components/Footer';
+import PlaceObj from '@/components/PlaceObj';
+import { useLocalSearchParams } from "expo-router";
 
  
 
 export default function HomeScreen() {
+  const { name } = useLocalSearchParams();
+  const today = new Date().toLocaleDateString("lv-LV");
   return (
    
       
       <SafeAreaView style={styles.container}>
       <Header>
-        <User>{"Olena"}</User>
-        <Data>{"01.01.2026"}</Data>
+        <User>{name}</User>
+        <Data>{today}</Data>
       </Header>
      <ScrollPanel/>
      
