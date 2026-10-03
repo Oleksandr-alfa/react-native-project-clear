@@ -32,7 +32,6 @@ export default function TabLayout() {
           <Tabs.Screen name="navigate" options={{
               headerShown: false,
               tabBarIcon: ({ color, focused }) => (
-
            <Ionicons name={focused ? 'map' : 'map-outline'} color={color} size={24}/>
         ),
            }} />
