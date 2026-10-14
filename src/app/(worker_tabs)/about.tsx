@@ -5,10 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function AboutScreen() {
   return (
     <SafeAreaView style={styles.container}>
-          <Text style={styles.text}>About screen</Text>
-           <Link href="/" style={styles.button}>
-                  Go to LoginScreen screen
-                </Link>
+       
     </SafeAreaView>
   );
 }

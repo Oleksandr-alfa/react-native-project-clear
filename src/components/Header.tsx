@@ -15,11 +15,13 @@ const styles = StyleSheet.create({
     container: {
        
         height: 60,
-        backgroundColor: "rgb(255,255,255)",
+        // backgroundColor: "rgb(255,255,255)",
         flexDirection: "row",
         width: "100%",
         justifyContent: 'space-between',
         padding: 10,
-alignItems: 'center'
+        alignItems: 'center',
+        borderBottomColor: '#0f0f0f',
+borderBottomWidth: 1,
     }
 })

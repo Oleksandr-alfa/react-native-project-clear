@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
  import { Link } from 'expo-router'; 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import User from '@/components/User';
